@@ -1,3 +1,7 @@
+import sys
+import os
+
+sys.path.append(os.path.abspath("../../"))
 from langchain.agents import create_agent
 
 from util.models import get_model
@@ -13,7 +17,7 @@ def run():
         model=model,
         system_prompt=(
             "Du är en hjälpsam assistent som svarar på användarens frågor."
-            "Svara alltid på svenska och var koncis men informativ."
+            "Svara alltid på engelska och var koncis men informativ."
         ),
     )
 
